@@ -27,4 +27,4 @@ hipotesis(alergia):-
     sintoma(estornudo),
     sintoma(escurrimiento_nasal),
     sintoma(ojos_irritados),
-    sintoma(garganta_irritada).
+    sintoma(dolor_de_garganta).

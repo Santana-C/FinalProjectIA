@@ -304,15 +304,19 @@ public class Main extends javax.swing.JFrame {
         introducirSintomas();
         Query hipotesisCovid = new Query("hipotesis(coronavirus).");
         Query hipotesisGripe = new Query("hipotesis(gripe).");
-        Query hipotesisDolorGarganta = new Query("hipotesis(dolor_de_garganta).");
+        Query hipotesisResfriado = new Query("hipotesis(resfriado).");
+        Query hipotesisAlergia = new Query("hipotesis(alergia).");
         if(hipotesisCovid.hasSolution()){
             return "Es altamente probable que usted tenga Covid.";
         }
         else if(hipotesisGripe.hasSolution()){
             return "Usted tiene Gripe.";
         }
-        else if(hipotesisDolorGarganta.hasSolution()){
-            return "Usted solo tiene un dolor de garganta.";
+        else if(hipotesisResfriado.hasSolution()){
+            return "Usted solo tiene un resfriado.";
+        }
+        else if(hipotesisAlergia.hasSolution()){
+            return "Usted solo sufre una alergia.";
         }
         return "<html>Sus sintomas son muy particulares,<br>por favor acuda a un doctor.</html>";
     }
