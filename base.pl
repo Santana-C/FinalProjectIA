@@ -5,8 +5,7 @@ hipotesis(coronavirus):-
     sintoma(dolor_muscular),
     sintoma(dolor_de_cabeza),
     sintoma(dolor_de_garganta),
-    (sintoma(perdida_olfato); sintoma(perdida_gusto)),
-    sintoma(problemas_respiratorios).
+    (sintoma(perdida_olfato); sintoma(perdida_gusto);sintoma(problemas_respiratorios)).
 
 hipotesis(gripe):-
     sintoma(tos),
@@ -14,7 +13,6 @@ hipotesis(gripe):-
     sintoma(diarrea),
     sintoma(dolor_muscular),
     sintoma(dolor_de_cabeza),
-    sintoma(problemas_respiratorios),
     sintoma(dolor_de_garganta).
 
 hipotesis(resfriado):-

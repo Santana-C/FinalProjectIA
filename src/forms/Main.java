@@ -91,16 +91,12 @@ public class Main extends javax.swing.JFrame {
                         .addContainerGap()
                         .addComponent(lblTitulo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(93, 93, 93)
-                                .addComponent(radSi)
-                                .addGap(18, 18, 18)
-                                .addComponent(radNo))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(lblDetalle, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 18, Short.MAX_VALUE)))
+                        .addGap(93, 93, 93)
+                        .addComponent(radSi)
+                        .addGap(18, 18, 18)
+                        .addComponent(radNo)
+                        .addGap(0, 78, Short.MAX_VALUE))
+                    .addComponent(lblDetalle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -183,6 +179,7 @@ public class Main extends javax.swing.JFrame {
         else{
             Query eliminarSintomasDeBase = new Query("retractall(sintoma(X)).");
             Map<String,Term>[] solutions = eliminarSintomasDeBase.allSolutions();
+            btnSiguiente.setText("Siguiente");
         }
         refreshControls();
     }//GEN-LAST:event_btnInicio_Click
